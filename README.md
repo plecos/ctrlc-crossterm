@@ -1,6 +1,12 @@
 # Ctrl-C Handling Rust Application
 
-This Rust program demonstrates how to handle Ctrl-C (Control + C) key press events using the `crossterm` crate for terminal manipulation and event handling. The program runs a loop that waits for the Ctrl-C key press and exits gracefully when it is detected.
+This Rust program demonstrates how to handle Ctrl-C (Control + C) key press events using the `crossterm` crate for terminal manipulation and event handling. 
+
+There are two projects:  nonworking and solution.  
+
+The nonworking project demonstrates the use of crate [ctrlc](https://docs.rs/ctrlc/latest/ctrlc/) in combination with crate [crossterm](https://docs.rs/crossterm/latest/crossterm/) , and how ctrlc is not able to intercept CTRL-C.
+
+The solution project demonstrates that by using just the crate [crossterm](https://docs.rs/crossterm/latest/crossterm/) and a background thread, we can monitor keystrokes and, when CTRL-C is pressed, signal the main thread.
 
 ## Prerequisites
 
